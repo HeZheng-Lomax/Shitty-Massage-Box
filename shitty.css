@@ -60,6 +60,9 @@
     background: #fafafa;
     border: transparent;
     user-select: none;
+    outline: none;
+    box-shadow: none;
+    border: 1px solid #ccc;
   }
   
   /* Input form */
