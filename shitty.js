@@ -6,7 +6,8 @@ window.onload = function(){
 
     window.show = function() {
         let text = Message.value.trim();
-        output.value += text + "\n";
+        let N = Name.value.trim()
+        output.value += N + ": " + text + "\n";
         Message.value = ""; 
 
         localStorage.setItem("savedMessages", output.value);
