@@ -13,7 +13,10 @@ window.onload = function(){
         localStorage.setItem("savedMessages", output.value);
         }
 
-    
+    window.clean() = function(){
+        output.value = "";
+        localStorage.removeItem("savedMessages");
+    }
         let saved = localStorage.getItem("savedMessages");
         if (saved) {
             output.value = saved;
