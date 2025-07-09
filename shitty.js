@@ -1,7 +1,16 @@
+let Message 
+let Name
+let output 
+function clean(){
+    output.value = "";
+    localStorage.removeItem("savedMessages");
+    //output.value = null;
+    //localStorage.setItem("savedMessages", output.value);
+ }
 window.onload = function(){
-    let Message = document.getElementById("message");
-    let Name = document.getElementById("name");
-    let output = document.getElementById("message-box");
+    Message = document.getElementById("message");
+    Name = document.getElementById("name");
+    output = document.getElementById("message-box");
 
 
     window.show = function() {
@@ -13,10 +22,7 @@ window.onload = function(){
         localStorage.setItem("savedMessages", output.value);
         }
 
-    window.clean() = function(){
-        output.value = "";
-        localStorage.removeItem("savedMessages");
-    }
+    
         let saved = localStorage.getItem("savedMessages");
         if (saved) {
             output.value = saved;
