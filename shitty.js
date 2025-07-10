@@ -10,7 +10,12 @@ function clean(){
     //localStorage.setItem("savedMessages", output.value);
  }
  function stepBack(){
-    output.value = lastSTP;
+    if (lastSTP == null){
+        output.value = "";
+    }
+    else{
+        output.value = lastSTP;
+    }
  }
 window.onload = function(){
     Message = document.getElementById("message");
