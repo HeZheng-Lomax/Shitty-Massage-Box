@@ -1,11 +1,16 @@
 let Message 
 let Name
 let output 
+let lastSTP
 function clean(){
+    lastSTP = localStorage.getItem("savedMessages");
     output.value = "";
     localStorage.removeItem("savedMessages");
     //output.value = null;
     //localStorage.setItem("savedMessages", output.value);
+ }
+ function stepBack(){
+    output.value = lastSTP;
  }
 window.onload = function(){
     Message = document.getElementById("message");
